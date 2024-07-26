@@ -21,6 +21,6 @@ from article.views import HomeView, PublicationDetailView, AboutView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', HomeView.as_view()),
-    path('publication-detail/', PublicationDetailView.as_view()),
+    path('publication-detail/<int:pk>/', PublicationDetailView.as_view(), name="publication-detail-url"),
     path('about/', AboutView.as_view())
 ]
