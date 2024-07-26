@@ -25,10 +25,10 @@
 				    <div class="media">
 					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{{ item.image.url }}" alt="image">
 					    <div class="media-body">
-						    <h3 class="title mb-1"><a href="blog-post.html">{{ item.name }}</a></h3>
+						    <h3 class="title mb-1"><a href="{% url 'publication-detail-url' item.id %}">{{ item.name }}</a></h3>
 						    <div class="meta mb-1"><span class="date">{{ item.creation_date }}</span><span class="time">5 min read</span></div>
 						    <div class="intro">{{ item.short_description }}...</div>
-						    <a class="more-link" href="">Read more &rarr;</a>
+						    <a class="more-link" href="{% url 'publication-detail-url' item.id %}">Read more &rarr;</a>
 					    </div><!--//media-body-->
 				    </div><!--//media-->
 			    </div><!--//item-->
