@@ -1,5 +1,10 @@
 from django.contrib import admin
-from article.models import Publication, Category, Hashtag
+from article.models import Publication, PublicationComment, Category, Hashtag
+
+
+@admin.register(PublicationComment)
+class PublicationCommentAdmin(admin.ModelAdmin):
+    list_display = ['text']
 
 
 @admin.register(Publication)

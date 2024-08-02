@@ -28,6 +28,18 @@
 
 			    </div>
 
+                <h4>Категория: {{ publication.category.title }}</h4>
+
+                {% for item in publication.hashtags.all %}
+                <h5>хэштег #{{ item.title }}</h5>
+                {% endfor %}
+
+                <form action="create-comment/" method="post">
+                    {% csrf_token %}
+                    <textarea></textarea>
+                    <input value="ОТПРАВИТЬ" type="submit">
+                </form>
+
 		    </div><!--//container-->
 	    </article>
 
